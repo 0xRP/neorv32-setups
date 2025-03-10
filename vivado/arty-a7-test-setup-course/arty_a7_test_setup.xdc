@@ -7,16 +7,16 @@
 #create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports { clk_i }];
 
 ## LEDs
-#set_property -dict { PACKAGE_PIN H5   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[0] }]; #IO_L24N_T3_35 Sch=led[4]
-#set_property -dict { PACKAGE_PIN J5   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[1] }]; #IO_25_35 Sch=led[5]
-#set_property -dict { PACKAGE_PIN T9   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[2] }]; #IO_L24P_T3_A01_D17_14 Sch=led[6]
-#set_property -dict { PACKAGE_PIN T10  IOSTANDARD LVCMOS33 } [get_ports { gpio_o[3] }]; #IO_L24N_T3_A00_D16_14 Sch=led[7]
+#set_property -dict { PACKAGE_PIN H5   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[0] }]; #IO_L24N_T3_35 Sch=led[4]
+#set_property -dict { PACKAGE_PIN J5   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[1] }]; #IO_25_35 Sch=led[5]
+#set_property -dict { PACKAGE_PIN T9   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[2] }]; #IO_L24P_T3_A01_D17_14 Sch=led[6]
+#set_property -dict { PACKAGE_PIN T10  IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[3] }]; #IO_L24N_T3_A00_D16_14 Sch=led[7]
 
 ## Pmod Header JA (unused GPIO outputs)
-#set_property -dict { PACKAGE_PIN G13  IOSTANDARD LVCMOS33 } [get_ports { gpio_o[4] }]; #IO_0_15 Sch=ja[1]
-#set_property -dict { PACKAGE_PIN B11  IOSTANDARD LVCMOS33 } [get_ports { gpio_o[5] }]; #IO_L4P_T0_15 Sch=ja[2]
-#set_property -dict { PACKAGE_PIN A11  IOSTANDARD LVCMOS33 } [get_ports { gpio_o[6] }]; #IO_L4N_T0_15 Sch=ja[3]
-#set_property -dict { PACKAGE_PIN D12  IOSTANDARD LVCMOS33 } [get_ports { gpio_o[7] }]; #IO_L6P_T0_15 Sch=ja[4]
+#set_property -dict { PACKAGE_PIN G13  IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[4] }]; #IO_0_15 Sch=ja[1]
+#set_property -dict { PACKAGE_PIN B11  IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[5] }]; #IO_L4P_T0_15 Sch=ja[2]
+#set_property -dict { PACKAGE_PIN A11  IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[6] }]; #IO_L4N_T0_15 Sch=ja[3]
+#set_property -dict { PACKAGE_PIN D12  IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[7] }]; #IO_L6P_T0_15 Sch=ja[4]
 
 ## USB-UART Interface
 #set_property -dict { PACKAGE_PIN D10  IOSTANDARD LVCMOS33 } [get_ports { uart0_txd_o }]; #IO_L19N_T3_VREF_16 Sch=uart_rxd_out
@@ -52,10 +52,10 @@ create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { cl
 #set_property -dict { PACKAGE_PIN M15    IOSTANDARD LVCMOS33 } [get_ports { led5_r }]; #IO_L23N_T3_35 Sch=LED5_R
 
 ## LEDs
-set_property -dict { PACKAGE_PIN R14    IOSTANDARD LVCMOS33 } [get_ports { gpio_o[0] }]; #IO_L6N_T0_VREF_34 Sch=LED0
-set_property -dict { PACKAGE_PIN P14    IOSTANDARD LVCMOS33 } [get_ports { gpio_o[1] }]; #IO_L6P_T0_34 Sch=LED1
-set_property -dict { PACKAGE_PIN N16    IOSTANDARD LVCMOS33 } [get_ports { gpio_o[2] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=LED2
-set_property -dict { PACKAGE_PIN M14    IOSTANDARD LVCMOS33 } [get_ports { gpio_o[3] }]; #IO_L23P_T3_35 Sch=LED3
+set_property -dict { PACKAGE_PIN R14    IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[0] }]; #IO_L6N_T0_VREF_34 Sch=LED0
+set_property -dict { PACKAGE_PIN P14    IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[1] }]; #IO_L6P_T0_34 Sch=LED1
+set_property -dict { PACKAGE_PIN N16    IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[2] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=LED2
+set_property -dict { PACKAGE_PIN M14    IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[3] }]; #IO_L23P_T3_35 Sch=LED3
 
 
 
@@ -66,10 +66,10 @@ set_property -dict { PACKAGE_PIN D19    IOSTANDARD LVCMOS33 } [get_ports { rst_i
 #set_property -dict { PACKAGE_PIN L19    IOSTANDARD LVCMOS33 } [get_ports { btn[3] }]; #IO_L9P_T1_DQS_AD3P_35 Sch=BTN3
 
 ## Pmod Header JA
-set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[4] }]; #IO_L17P_T2_34 Sch=JA1_P (Pin 1)
-set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[5] }]; #IO_L17N_T2_34 Sch=JA1_N (Pin 2)
-set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[6] }]; #IO_L7P_T1_34 Sch=JA2_P (Pin 3)
-set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { gpio_o[7] }]; #IO_L7N_T1_34 Sch=JA2_N (Pin 4)
+set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[4] }]; #IO_L17P_T2_34 Sch=JA1_P (Pin 1)
+set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[5] }]; #IO_L17N_T2_34 Sch=JA1_N (Pin 2)
+set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[6] }]; #IO_L7P_T1_34 Sch=JA2_P (Pin 3)
+set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { gpio_o_tri_o[7] }]; #IO_L7N_T1_34 Sch=JA2_N (Pin 4)
 #set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { ja_p[3] }]; #IO_L12P_T1_MRCC_34 Sch=JA3_P (Pin 7)
 #set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports { ja_n[3] }]; #IO_L12N_T1_MRCC_34 Sch=JA3_N (Pin 8)
 #set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { ja_p[4] }]; #IO_L22P_T3_34 Sch=JA4_P (Pin 9)

@@ -16,5 +16,8 @@ if {[llength $files] != 0} {
 # create project
 create_project -part $part $prj $outputdir
 
+# set target lang 
+set_property target_language VHDL [current_project]
+
 # add source files: constraints
 add_files -fileset constrs_1 [glob ./*.xdc]
