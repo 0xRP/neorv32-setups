@@ -5,3 +5,4 @@
 [submodule "neorv32"]
 	path = neorv32
 	url = https://github.com/0xRP/neorv32
+	branch = master
