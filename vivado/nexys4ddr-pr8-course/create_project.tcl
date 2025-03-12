@@ -113,7 +113,7 @@ set_property name twi_sda_i [get_bd_ports twi_sda_i_0]
 set_property name twi_scl_i [get_bd_ports twi_scl_i_0]
 
 #make_wrapper -files [get_files ./work/nexys4ddr-pr8.srcs/sources_1/bd/design_1/design_1.bd] -top
-import_files -force -norecurse ../design_1_wrapper.vhd
+import_files -force -norecurse ./design_1_wrapper.vhd
 
 # run synthesis, implementation and bitstream generation
 launch_runs impl_1 -to_step write_bitstream -jobs 8
